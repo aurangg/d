@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Promo Code - Essence</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css"> -->
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header_area" id="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- Logo -->
+                <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
+                <!-- <span style="font-size:30px;cursor:pointer;display:none" onclick="closeNav()" id="close">&#9776;</span> -->
+                <!-- Navbar Toggler -->
+                
+                <!-- Menu -->
+                <div id="mySidepanel" class="sidepanel">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+                  <a href="index.html">Sales</a>
+                  <a href="#">Views</a>
+                  <a href="inventory.html">Inventory</a>
+                  <a href="banner.html">Banner Management</a>
+                  <a href="ordermanagement.html">Order Management</a>
+                  <a href="inventory.html">Inventory</a>
+                  <a href="promocode.html">Promos</a>
+                  <a href="#">Discounts</a>
+                  <a href="#">User Management</a>
+                  <a href="#">Newsletter</a>
+                </div>
+                <div id="overlay" onclick="closeNav()"></div>
+            </nav>
+
+          </div>
+        
+    </header>
+    
+    <div class="container">
+      <div class="row">
+          <div class="col-12">
+            <div class="headings">
+              <h2>
+                Promo Codes
+              </h2>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="box checkout_details_area" style="margin-bottom: 30px;">
+              <div class="head">
+                <h5>Add A New Promo Code</h5>
+                <form class="needs-validation" style="margin-top:30px;" novalidate>
+                  <div class="form-row">
+                    <div class="col-md-6 mb-4">
+                      <label for="validationCustom01">Promo Code</label>
+                      <input type="text" class="form-control form-control-md" id="validationCustom01" placeholder="DASTKAAR-04" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">Enter promo code</div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <label for="validationCustom02">Percentage</label>
+                      <input type="number" class="form-control form-control-md" id="validationCustom02" placeholder="4%" min="0" max="100" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">Enter Percentage</div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="col-md-6 mb-4">
+                      <label for="validationCustom03">Starting Date</label>
+                      <input type="date" class="form-control form-control-md" id="validationCustom03" name="validationCustom03" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <label for="validationCustom04">Ending Date</label>
+                      <input type="date" class="form-control form-control-md" id="validationCustom04" name="validationCustom04" min="" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">Select Ending Date for Promo</div>
+                    </div>
+                  </div>
+
+                  <div class="flex-container">
+                    <button class="btn btn-primary" type="submit">Add Promo Code</button>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+              <div class="box" style="margin-top:30px;">
+                <div class="head">
+                  <h5>Promo Code History</h5>
+                  
+                  <div class="table-responsive" style="margin-top:30px">
+                    <table class="table table-bordered">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Promo Code</th>
+                          <th scope="col">Percentage</th>
+                          <th scope="col">Starting Date</th>
+                          <th scope="col">Ending Date</th>
+                          <th scope="col">Validity Days</th>
+                          <th scope="col">Promo Status</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td for="recipient-name" id="recipient-name">DASTKAAR-01</td>
+                          <td>3%</td>
+                          <td>
+                            15/08/2020
+                          </td>
+                          <td>
+                            15/09/2020
+                          </td>
+                          <td>30 Days</td>
+                          <td style="color:green">Active</td>
+                          <td>
+                            <a href="editpromocode.html">
+                              <button class="edit_btn"><i class="fa fa-pencil"></i></button>
+                            </a>
+                            <button class="delete_btn" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="DASTKAAR-01"><i class="fa fa-trash"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>DASTKAAR-02</td>
+                          <td>4%</td>
+                          <td>
+                            21/08/2020
+                          </td>
+                          <td>
+                            1/10/2020
+                          </td>
+                          <td>40 Days</td>
+                          <td style="color:green">Active</td>
+                          <td>
+                            <a href="editpromocode.html">
+                              <button class="edit_btn"><i class="fa fa-pencil"></i></button>
+                            </a>
+                            <button class="delete_btn" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="DASTKAAR-02"><i class="fa fa-trash"></i></button>
+                          </td>
+                        </tr>
+                        <tr style="opacity: 0.6;">
+                          <th scope="row">3</th>
+                          <td>DASTKAAR-03</td>
+                          <td>6%</td>
+                          <td>
+                            01/07/2020
+                          </td>
+                          <td>
+                            1/09/2020
+                          </td>
+                          <td>60 Days</td>
+                          <td>Inactive</td>
+                          <td>
+                            <a href="editpromocode.html">
+                              <button class="edit_btn"><i class="fa fa-pencil"></i></button>
+                            </a>
+                            <button class="delete_btn" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="DASTKAAR-03"><i class="fa fa-trash"></i></button>
+                          </td>
+                        </tr>
+                        
+                        
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Modal Code -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <form>
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <p class="modal-class-title" id="exampleModalLabel">New message</p>
+                            
+                            <p style="text-align: center;opacity:0.6;color:red;">
+                              This action can't be undone.
+                            </p>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-danger">Delete Promo Code</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    
+    <script>
+      $('#exampleModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.data('whatever') // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      var modal = $(this)
+      modal.find('.modal-class-title').text('Are you sure that you want to delete ' + recipient + '?')
+      modal.find('.modal-body td').val(recipient)
+    })
+    </script>
+
+    <script>
+      document.getElementById('validationCustom03').valueAsDate = new Date();
+      var today = new Date().toISOString().split('T')[0];
+      document.getElementsByName("validationCustom03")[0].setAttribute('min', today);
+    </script>
+    <script>
+      var today = new Date().toISOString().split('T')[0];
+      document.getElementsByName("validationCustom04")[0].setAttribute('min', today);
+    </script>
+
+  <script>
+    function openNav() {
+      if(window.screen.width <= 560){
+          document.getElementById("mySidepanel").style.width = "70%";
+          document.getElementById("overlay").style.display = "block";
+      }
+      else{
+          document.getElementById("mySidepanel").style.width = "20%";
+          document.getElementById("overlay").style.display = "block";
+      }
+    }
+
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Classy Nav js -->
+    <script src="js/classy-nav.min.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>

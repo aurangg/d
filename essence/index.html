@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Essence - Fashion Ecommerce Template</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    
+    <!-- <link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css"> -->
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+<body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header_area" id="header_area">
+      <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- Logo -->
+                <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
+                <!-- <span style="font-size:30px;cursor:pointer;display:none" onclick="closeNav()" id="close">&#9776;</span> -->
+                <!-- Navbar Toggler -->
+                
+                <!-- Menu -->
+                <div id="mySidepanel" class="sidepanel">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+                  <a href="index.html">Sales</a>
+                  <a href="#">Views</a>
+                  <a href="inventory.html">Inventory</a>
+                  <a href="banner.html">Banner Management</a>
+                  <a href="ordermanagement.html">Order Management</a>
+                  <a href="inventory.html">Inventory</a>
+                  <a href="#">Promos</a>
+                  <a href="#">Discounts</a>
+                  <a href="#">User Management</a>
+                  <a href="#">Newsletter</a>
+                </div>
+                <div id="overlay" onclick="closeNav()"></div>
+            </nav>
+            </div>
+                        <!-- Header Meta Data -->
+            
+
+        
+    </header>
+    
+    <div class="container">
+      <!-- <div class="row">
+        <div class="col-xs-6 col-sm-3">
+          <div class="order-details-confirmations">
+            A
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="order-details-confirmations">
+            A
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="order-details-confirmations">
+            A
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="order-details-confirmations">
+            A
+          </div>
+        </div>
+      </div> -->
+      <div id="row_id">
+        <h5 id="dashboard_heading">
+          Greetings, Hammad!
+        </h5>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="flex-vertical">
+              <h5>Total Earnings
+              </h5>
+              <p>62,000
+              </p>
+              <span id="earnings_month">
+                This Year
+              </span>
+              <div class="flex-container" style="margin-top:40px">
+                <div class="earnings">
+                  <div class="circles" id="green"></div>
+                  <p>32,000</p>
+                  <p id="second_paragraph">This Month</p>
+                </div>
+                <div class="earnings">
+                  <div class="circles" id="red"></div>
+                  <p>32,000</p>
+                  <p id="second_paragraph">Previous Month</p>
+                </div>
+                <div class="earnings">
+                  <div class="circles" id="cyan"></div>
+                  <p>32,000</p>
+                  <p id="second_paragraph">Average Earning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <canvas id="earningsChart"></canvas>
+          </div>
+        </div>
+        <div class="row" id="row_id2">
+          <div class="col-xs-6 col-sm-3" style="width:50%">
+            <div class="order-details-confirmations" id="orders_today">
+              <h5>Orders Today</h5>
+              <p>
+                <img src="img/product-img/graph.png" alt="">
+                1.2k
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-3" style="width:50%">
+            <div class="order-details-confirmations" id="shipped">
+              <h5>Orders Shipped</h5>
+              <p>2.3k</p>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-3" style="width:50%">
+            <div class="order-details-confirmations" id="delivered">
+              <h5>Delivered Orders</h5>
+              <p>7.2k</p>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-3" style="width:50%">
+            <div class="order-details-confirmations" id="completed">
+              <h5>Completed Orders</h5>
+              <p>8.2k</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="row" id="row_id2">
+        <div class="col-lg-6">
+          <div class="order-details-confirmations">
+            <h5 style="text-align: center;color:black">
+              Orders (By Category)
+            </h5>
+            <p id="overall">
+              Overall
+            </p>
+            <div class="flex-container">
+              <canvas id="pieChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="order-details-confirmations">
+            <h5 style="text-align: center;color:black">Monthly Sales </h5>
+            <p id="overall">
+              Overall
+            </p>
+            <div class="flex-container">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row" id="row_id2">
+        <div class="col-lg-6">
+          <div class="order-details-confirmations">
+            <h5 style="text-align: center;color:black">Top 4 Products - By Views </h5>
+            <div class="flex-container">
+              <canvas id="topFourViews"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="order-details-confirmations">
+            <h5 style="text-align: center;color:black">Top 4 Products - By Sales </h5>
+            <div class="flex-container">
+              <canvas id="topFourSales"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    
+    <script>
+      var ctx = document.getElementById('topFourViews').getContext('2d');
+      var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["Flower Dish", "Hand-made Box", "Lawn Shirt", "Resin Table"],
+        datasets: [{
+          label: 'Views',
+          data: [1200, 1900, 2043, 785],
+          backgroundColor: [
+            'rgba(255, 99, 132)',
+            'rgba(54, 162, 235)',
+            'rgba(255, 206, 86)',
+            'rgba(75, 192, 192)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }],
+          
+        },
+        legend: {
+              display: false
+            },
+      }
+    });
+    </script>
+
+<script>
+  var ctx = document.getElementById('topFourSales').getContext('2d');
+  var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["Lawn Shirt", "Ashtrays", "Resin Table", "Dinner Set"],
+    datasets: [{
+      label: 'Sales',
+      data: [60, 19, 43, 85],
+      backgroundColor: [
+        "#ff7e80",
+        "#2ecc71",
+        "#9b59b6",
+        "#3498db",
+      ],
+      borderColor: [
+        "#ff7e80",
+        "#2ecc71",
+        "#9b59b6",
+        "#3498db",
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
+    legend: {
+          display: false
+        }
+  }
+});
+</script>
+
+    <script>
+      var ctx = document.getElementById('pieChart').getContext('2d');
+      var myPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+        labels: ["Ceramics", "Wooden Art", "Resit Art", "Apparel"],
+        datasets: [{
+          backgroundColor: [
+            "#ff7e80",
+            "#2ecc71",
+            "#9b59b6",
+            "#3498db",
+          ],
+          data: [32, 49, 23, 17]
+        }]
+      },
+        options: {
+          
+        }
+      });
+    </script>
+    
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+          // The type of chart we want to create
+          type: 'line',
+        
+          // The data for our dataset
+          data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            datasets: [{
+              label: 'Orders Per Month',
+              backgroundColor: '#eaea00',
+              borderColor: '#b2b209',
+              data: [12, 34, 66, 78, 54, 22, 80, 90, 99, 39, 57, 69]
+            }]
+          },
+        
+          // Configuration options go here
+          options: {
+            legend: {
+              display: false
+            }
+          }
+          
+        });
+        </script>
+        <script>
+            var ctx = document.getElementById('earningsChart').getContext('2d');
+            var gradient = ctx.createLinearGradient(0, 0, 0, 500);
+            gradient.addColorStop(0, 'rgba(192,240,251,1)');   
+            gradient.addColorStop(0.5, 'rgba(192,240,251,0)');
+            var chart = new Chart(ctx, {
+              // The type of chart we want to create
+              type: 'line',
+            
+              // The data for our dataset
+              data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                  backgroundColor : gradient, // Put the gradient here as a fill color
+                  pointBackgroundColor: '#649ba7',
+                  borderWidth: 1,
+                  borderColor: '#649ba7',
+                  label: "Earnings",
+                  data: [22000, 10000, 56000, 22787, 52120, 30330, 45000, 90000, 34000, 21000, 6000, 71000]
+                }]
+              },
+            
+              // Configuration options go here
+              options: {
+                legend:{
+                  display:false
+                },
+                scales:{
+                  yAxes:[{
+                    display:true,
+                    ticks:{
+                      maxTicksLimit:6
+                    },
+                    gridLines:{
+                      drawOnChartArea: false
+                    }
+
+                  }],
+                  xAxes:[{
+                    gridLines: {
+                      drawOnChartArea: false
+                    }
+                    }]
+                },
+                responsive:true
+              }
+            });
+            </script>
+            
+               
+                    
+
+    <script>
+      function openNav() {
+        if(window.screen.width <= 560){
+            document.getElementById("mySidepanel").style.width = "70%";
+            document.getElementById("overlay").style.display = "block";
+        }
+        else{
+            document.getElementById("mySidepanel").style.width = "20%";
+            document.getElementById("overlay").style.display = "block";
+        }
+      }
+
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+
+
+    
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Classy Nav js -->
+    <script src="js/classy-nav.min.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>

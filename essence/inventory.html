@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Essence - Fashion Ecommerce Template</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css"> -->
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header_area" id="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- Logo -->
+                <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
+                <!-- <span style="font-size:30px;cursor:pointer;display:none" onclick="closeNav()" id="close">&#9776;</span> -->
+                <!-- Navbar Toggler -->
+                
+                <!-- Menu -->
+                <div id="mySidepanel" class="sidepanel">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+                  <a href="index.html">Sales</a>
+                  <a href="#">Views</a>
+                  <a href="inventory.html">Inventory</a>
+                  <a href="banner.html">Banner Management</a>
+                  <a href="ordermanagement.html">Order Management</a>
+                  <a href="inventory.html">Inventory</a>
+                  <a href="promocode.html">Promos</a>
+                  <a href="#">Discounts</a>
+                  <a href="#">User Management</a>
+                  <a href="#">Newsletter</a>
+                </div>
+                <div id="overlay" onclick="closeNav()"></div>
+            </nav>
+
+            <!-- Header Meta Data -->
+            
+          </div>
+        
+    </header>
+    
+    
+    
+    <div class="container">
+      <div class="row">
+          <div class="col-12">
+            <div class="headings">
+              <h2>
+                Inventory Management
+              </h2>
+              <p id="margin">
+                Add the latest items in the category and get ready to post them to your website!
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-9"></div>
+          <div class="col-lg-3">
+            <a href="addInventory.html">
+              <button class="add_button" style="vertical-align:middle">
+                <span>Add Inventory </span>
+                
+              </button>
+            </a>
+          </div>
+          <div class="col-12">
+              <div class="box">
+                <div class="head">
+                  <h5>Orders History</h5>
+                  <div class="table-responsive" style="margin-top:30px">
+                    <table class="table table-bordered">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Order ID</th>
+                          <th scope="col">Product Name</th>
+                          <th scope="col">Items Ordered</th>
+                          <th scope="col">Total</th>
+                          <th scope="col">Order Status</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>001</td>
+                          <td>Handicraft</td>
+                          <td>3</td>
+                          <td>Rs. 650/-</td>
+                          <td style="color:green">Delivered</td>
+                          <td>
+                            <button class="edit_btn"><i class="fa fa-pencil"></i></button>
+                            <button class="delete_btn"><i class="fa fa-trash"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>002</td>
+                          <td>Handicraft</td>
+                          <td>2</td>
+                          <td>Rs. 1050/-</td>
+                          <td style="color:green">Delivered</td>
+                          <td>
+                            <button class="edit_btn"><i class="fa fa-pencil"></i></button>
+                            <button class="delete_btn"><i class="fa fa-trash"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>003</td>
+                          <td>Handicraft</td>
+                          <td>7</td>
+                          <td>Rs. 3950/-</td>
+                          <td style="color:cadetblue">Dispatched</td>
+                          <td>
+                            <button class="edit_btn"><i class="fa fa-pencil"></i></button>
+                            <button class="delete_btn"><i class="fa fa-trash"></i></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>                  
+              </div>
+          </div>
+        </div>
+      </div>
+    
+
+
+
+
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    
+    
+
+    <script>
+      function openNav() {
+        if(window.screen.width <= 560){
+            document.getElementById("mySidepanel").style.width = "70%";
+            document.getElementById("overlay").style.display = "block";
+        }
+        else{
+            document.getElementById("mySidepanel").style.width = "20%";
+            document.getElementById("overlay").style.display = "block";
+        }
+      }
+
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+    
+    </script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Classy Nav js -->
+    <script src="js/classy-nav.min.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>

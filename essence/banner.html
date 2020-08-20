@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Essence - Fashion Ecommerce Template</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css"> -->
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header_area" id="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- Logo -->
+                <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
+                <!-- <span style="font-size:30px;cursor:pointer;display:none" onclick="closeNav()" id="close">&#9776;</span> -->
+                <!-- Navbar Toggler -->
+                
+                <!-- Menu -->
+                <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+                    <a href="index.html">Sales</a>
+                    <a href="#">Views</a>
+                    <a href="inventory.html">Inventory</a>
+                    <a href="banner.html">Banner Management</a>
+                    <a href="ordermanagement.html">Order Management</a>
+                    <a href="inventory.html">Inventory</a>
+                    <a href="promocode.html">Promos</a>
+                    <a href="#">Discounts</a>
+                    <a href="#">User Management</a>
+                    <a href="#">Newsletter</a>
+                  </div>
+                  <div id="overlay" onclick="closeNav()"></div>
+            </nav>
+
+            <!-- Header Meta Data -->
+            
+          </div>
+        
+    </header>
+
+    
+    
+
+    <div class="container">
+      <div class="row">
+          <div class="col-12">
+            <div class="headings">
+              <h2>
+                Welcome to Banner Management
+              </h2>
+            </div>
+          </div>
+
+          <div class="col-12">
+              <div class="box">
+                <div class="head">
+                  <div class="row">
+                    <div class="col-lg-7" style="margin-top:10px;">
+                      <h3>Landing Page Banner</h3>
+                    </div>
+                    <div class="col-lg-5">
+                      <div class="toggle">
+                        <h4>
+                          <input type="text" id="txt" value="Hide Banner" disabled>
+                        </h4>
+                        <label class="switch" style="float:right;">
+                          <input type="checkbox" id="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img id="landing" src="img/bg-img/bg-1.jpg" alt="">
+                <div class="centered" style="display: none;" id="disabledText1">Disabled</div>
+                <div class="row">
+                  <div class="col-lg-9">
+                    <div style="margin-top:30px;">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="views">
+                            <h5>
+                              Total Views: 399
+                            </h5>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="views">
+                            <h5>
+                              Dimensions: 1920 × 770
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="inputfiles">
+                      <button class="btn essence-btn" type="file" style="width:100%;margin-top:30px;cursor:pointer;">Upload Banner</button>
+                      <input type="file" id="uploadfile" name="myfile" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-12">
+            <div class="box">
+              <div class="head">
+                <div class="row">
+                  <div class="col-lg-7"  style="margin-top:10px;">
+                    <h3>Sales Banner</h3>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="toggle">
+                      <h4>
+                        <input type="text" id="txt2" value="Hide Banner" disabled>
+                      </h4>
+                      <label class="switch" style="float:right;">
+                        <input type="checkbox" id="checkbox1" checked>
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img id="sales" src="img/bg-img/bg-5.jpg" alt="">
+              <div class="centered" style="display: none;" id="disabledText2">Disabled</div>
+              <div class="row">
+                <div class="col-lg-9">
+                  <div style="margin-top:30px;">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="views">
+                          <h5>
+                            Total Views: 399
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="views">
+                          <h5>
+                            Dimensions: 1920 × 770
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="inputfiles">
+                    <button class="btn essence-btn" type="file" style="width:100%;margin-top:30px;cursor:pointer;">Upload Banner</button>
+                    <input type="file" id="uploadfile" name="myfile" />
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+      </div>
+  </div>
+    
+    
+
+
+
+
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script>
+      const fileBlocks = document.querySelectorAll('.inputfiles')
+      const buttons = document.querySelectorAll('.essence-btn')
+
+      ;[...buttons].forEach(function (btn) {
+        btn.onclick = function () {
+          btn.parentElement.querySelector('input[type="file"]').click()
+        }
+      })
+
+      ;[...fileBlocks].forEach(function (block) {
+        block.querySelector('input[type="file"]').onchange = function () {
+          const filename = this.files[0].name
+
+          block.querySelector('.essence-btn').textContent = filename
+        }
+      })
+    </script>
+    
+  <script>
+    $('#checkbox').change(function(){
+      var checkChange = this.checked ? 'Hide Banner' : 'Show Banner';
+      var imageChange = this.checked? $('#landing').css({'opacity':'1'}) : $('#landing').css({'opacity':'0.3', 'transition': '0.3s'})
+      var textChange = this.checked? $('#disabledText1').css({'display':'none'}) : $('#disabledText1').css({'display':'block', 'transition': '0.3s'})
+      $('#txt').val(checkChange).css({'transition':'0.3s'});
+    });
+  </script>
+  <script>
+    $('#checkbox1').change(function(){
+      var checkChange = this.checked ? 'Hide Banner' : 'Show Banner';
+      var textChange = this.checked? $('#disabledText2').css({'display':'none'}) : $('#disabledText2').css({'display':'block', 'transition': '0.3s'})
+      var imageChange = this.checked? $('#sales').css({'opacity':'1'}) : $('#sales').css({'opacity':'0.3', 'transition': '0.3s'})
+      $('#txt2').val(checkChange).css({'transition':'0.3s'});
+    });
+  </script>
+
+    
+  <script>
+    function openNav() {
+        if(window.screen.width <= 560){
+            document.getElementById("mySidepanel").style.width = "70%";
+            document.getElementById("overlay").style.display = "block";
+        }
+        else{
+            document.getElementById("mySidepanel").style.width = "20%";
+            document.getElementById("overlay").style.display = "block";
+        }
+      }
+
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+
+    </script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Classy Nav js -->
+    <script src="js/classy-nav.min.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>
