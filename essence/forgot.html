@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Edit Promo Code - Dastkaarr</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css"> -->
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+   
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="box checkout_details_area" style="margin-bottom: 30px;">
+              <div class="head">
+                <h5>Password Reset</h5>
+                <form class="needs-validation" style="margin-top:30px;" novalidate>
+                  <div class="form-row">
+                    <div class="col-md-12 mb-4">
+                      <label for="validationCustom01">Email</label>
+                      <input type="email" class="form-control form-control-md" id="validationCustom01" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">Incorrect email</div>
+                    </div>
+                    <div class="col-md-12">
+                      <p style="text-align: center;display:block">
+                        We will send an email with a link to reset your password
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex-container">
+                    <button class="btn essence-btn" type="submit" style="width:100%;margin:10px 10px;">
+                      <a href="index.html" style="color:white;">
+                        Send Email
+                      </a>
+                    </button>
+                  </div>
+                </form>
+                <div class="flex-container" style="margin-top:20px">
+                  <p>
+                      <a href="login.html" id="signup">
+                         Sign In
+                      </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+    
+
+
+
+
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    
+    
+
+    <script>
+      document.getElementById('validationCustom03').valueAsDate = new Date();
+      var today = new Date().toISOString().split('T')[0];
+      document.getElementsByName("validationCustom03")[0].setAttribute('min', today);
+    </script>
+
+<script>
+  
+  var today = new Date().toISOString().split('T')[0];
+  document.getElementsByName("validationCustom04")[0].setAttribute('min', today);
+</script>
+
+  <script>
+    function openNav() {
+      if(window.screen.width <= 560){
+          document.getElementById("mySidepanel").style.width = "70%";
+          document.getElementById("overlay").style.display = "block";
+      }
+      else{
+          document.getElementById("mySidepanel").style.width = "20%";
+          document.getElementById("overlay").style.display = "block";
+      }
+    }
+
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Classy Nav js -->
+    <script src="js/classy-nav.min.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>
