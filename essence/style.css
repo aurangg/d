@@ -11,7 +11,8 @@
     /* ---------------------------------------
     ##### - PLACE YOUR CUSTOM CSS HERE - #####
     --------------------------------------- */
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat::ital,wght@0,100;0,300;0:500;1,200&display=swap');
+  
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500&display=swap');
     body{
       background-color: #fbfbfb;
     }
@@ -567,6 +568,72 @@
         background: -webkit-linear-gradient(-45deg, #ffc3a0 15%,#ffafbd 100%);
         background: linear-gradient(135deg, #ffc3a0 15%,#ffafbd 100%);
       }
+      .imagePreview {
+        width: 100%;
+        height: 180px;
+        background-position: center center;
+      background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+      background-color:#fff;
+        background-size: cover;
+      background-repeat:no-repeat;
+        display: inline-block;
+      box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
+      }
+      .btn-primary
+      {
+      display:block;
+      border-radius:0px;
+      box-shadow:0px 4px 6px 2px rgba(0,0,0,0.2);
+      margin-top:-5px;
+      }
+      .imgUp
+      {
+      margin-bottom:15px;
+      }
+      .del
+      {
+      position:absolute;
+      top:0px;
+      right:15px;
+      width:30px;
+      height:30px;
+      text-align:center;
+      line-height:30px;
+      background-color:rgba(255,255,255,0.6);
+      cursor:pointer;
+      }
+      .imgAdd
+      {
+      width:30px;
+      height:30px;
+      border-radius:50%;
+      background-color:#4bd7ef;
+      color:#fff;
+      box-shadow:0px 0px 2px 1px rgba(0,0,0,0.2);
+      text-align:center;
+      line-height:30px;
+      margin-top:0px;
+      cursor:pointer;
+      font-size:15px;
+      }
+
+      .results tr[visible='false'],
+        .no-result{
+          display:none;
+        }
+
+        .results tr[visible='true']{
+          display:table-row;
+        }
+
+        .counter{
+          padding:8px; 
+          color:#ccc;
+        }
+        #mobile{
+          display:none;
+        }
+
 
       @media(max-width:450px){
         #margin{
@@ -663,4 +730,182 @@
       #earningsChart{
         margin-top:40px;
       }
+      #web{
+        display:none;
+      }
+      #mobile{
+        display:revert;
+      }
+      #header_logo{
+        width:18px;
+        height:18px;
+      }
+      #sidepanel_logo{
+        width:100px;
+        height:100px;
+        margin-bottom:20px;
+      }
     }
+
+    /** * Extracted from: SweetAlert * Modified by: Istiak Tridip */
+ .success-checkmark {
+  width: 80px;
+  height: 115px;
+  margin: 0 auto;
+}
+.success-checkmark .check-icon {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 4px solid #f0683f;
+}
+.success-checkmark .check-icon::before {
+  top: 3px;
+  left: -2px;
+  width: 30px;
+  transform-origin: 100% 50%;
+  border-radius: 100px 0 0 100px;
+}
+.success-checkmark .check-icon::after {
+  top: 0;
+  left: 30px;
+  width: 60px;
+  transform-origin: 0 50%;
+  border-radius: 0 100px 100px 0;
+  animation: rotate-circle 4.25s ease-in;
+}
+.success-checkmark .check-icon::before, .success-checkmark .check-icon::after {
+  content: '';
+  height: 100px;
+  position: absolute;
+  background: #fff;
+  transform: rotate(-45deg);
+}
+.success-checkmark .check-icon .icon-line {
+  height: 5px;
+  background-color: #f0683f;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+}
+.success-checkmark .check-icon .icon-line.line-tip {
+  top: 46px;
+  left: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+  animation: icon-line-tip 0.75s;
+}
+.success-checkmark .check-icon .icon-line.line-long {
+  top: 38px;
+  right: 8px;
+  width: 47px;
+  transform: rotate(-45deg);
+  animation: icon-line-long 0.75s;
+}
+.success-checkmark .check-icon .icon-circle {
+  top: -4px;
+  left: -4px;
+  z-index: 10;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: content-box;
+  border: 4px solid rgb(240, 104, 63, .5);
+}
+.success-checkmark .check-icon .icon-fix {
+  top: 8px;
+  width: 5px;
+  left: 26px;
+  z-index: 1;
+  height: 85px;
+  position: absolute;
+  transform: rotate(-45deg);
+  background-color: #fff;
+}
+@keyframes rotate-circle {
+  0% {
+    transform: rotate(-45deg);
+ }
+  5% {
+    transform: rotate(-45deg);
+ }
+  12% {
+    transform: rotate(-405deg);
+ }
+  100% {
+    transform: rotate(-405deg);
+ }
+}
+@keyframes icon-line-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+ }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+ }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+ }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+ }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+ }
+}
+@keyframes icon-line-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+ }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+ }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px;
+ }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+ }
+}
+table td a{
+  font-size:14px;
+  font-weight: 400;
+  
+}
+table td a:hover, a:focus{
+  font-size:14px;
+  font-weight:400;
+  color:red;
+}
+#signup{
+  font-size:14px;
+  font-weight: 400;
+  margin-left:8px;
+}
+#signup:hover, #signup:focus{
+  font-size:14px;
+  font-weight:400;
+  color:red;
+}
